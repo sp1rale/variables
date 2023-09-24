@@ -1,16 +1,7 @@
-import math
+total_seconds = int(input("Введіть час у секундах: "))
 
-diameter = float(input("Введіть діаметр кола: "))
+hours = total_seconds // 3600
+minutes = (total_seconds % 3600) // 60
+seconds = total_seconds % 60
 
-choice = input("Оберіть операцію (площа або периметр): ")
-
-radius = diameter / 2
-
-if choice == "площа":
-    area = math.pi * radius ** 2
-    print(f"Площа кола з діаметром {diameter} дорівнює {area:.2f} квадратних одиниць.")
-elif choice == "периметр":
-    perimeter = 2 * math.pi * radius
-    print(f"Периметр кола з діаметром {diameter} дорівнює {perimeter:.2f} одиниць довжини.")
-else:
-    print("Ви ввели некоректний вибір операції. Оберіть 'площа' або 'периметр'.")
+print(f"До опівночі залишилося {hours} годин, {minutes} хвилин і {seconds} секунд.")
